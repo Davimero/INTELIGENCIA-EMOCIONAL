@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juegos Educativos - Convivencia Escolar</title>
+
+<style>
+:root{
+    --primario:#6c5ce7;
+    --secundario:#ff7675;
+    --acento:#00b894;
+    --amarillo:#feca57;
+    --oscuro:#2d3436;
+}
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe, #55efc4);
+    background-attachment: fixed;
+    color:var(--oscuro);
+}
+
+
+nav{
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+    padding:1rem 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+nav .logo{
+    color:white;
+    font-weight:bold;
+    font-size:1.4rem;
+    text-transform:uppercase;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+    margin:0;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:var(--amarillo);
+}
+
+
+header{
+    text-align:center;
+    padding:70px 20px;
+    color:white;
+}
+
+header h1{
+    font-size:2.8rem;
+    margin:0;
+}
+
+header p{
+    font-size:1.2rem;
+    max-width:800px;
+    margin:15px auto 0;
+}
+
+
+.container{
+    max-width:1200px;
+    margin:-30px auto 60px auto;
+    padding:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.95);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+
+.subtema{
+    background: linear-gradient(90deg, var(--secundario), var(--amarillo));
+    color:white;
+    padding:15px 25px;
+    border-radius:20px;
+    display:inline-block;
+    font-weight:bold;
+    margin:30px 0 20px;
+}
+
+.juego-interactivo{
+    margin:35px 0 55px;
+    background: linear-gradient(135deg, #6c5ce7, #00b894, #55efc4);
+    padding:18px;
+    border-radius:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.juego-interactivo:hover{
+    transform: translateY(-10px);
+    box-shadow:0 30px 50px rgba(0,0,0,0.35);
+}
+
+.juego-interactivo iframe{
+    width:100%;
+    height:620px;
+    border:none;
+    border-radius:22px;
+    background:white;
+    pointer-events: auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap:25px;
+}
+
+.cuadro{
+    background:#f8f9ff;
+    border-radius:20px;
+    padding:25px;
+    border-top:6px solid var(--primario);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cuadro:hover{
+    transform: translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.cuadro h3{
+    margin-top:0;
+    color:var(--primario);
+}
+
+
+@media(max-width:800px){
+    header h1{
+        font-size:2rem;
+    }
+    .juego-interactivo iframe{
+        height:420px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Dolores Sucre</div>
+    <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="que-es.html">¿Qué es el acoso?</a></li>
+        <li><a href="prevenir.html">Prevención</a></li>
+        <li><a href="causas.html">Causas</a></li>
+        <li><a href="para-quien.html">¿A quién afecta?</a></li>
+        <li><a href="juegos.html">Actividades</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>🎮 Juegos Educativos</h1>
+    <p>Aprender sobre convivencia escolar de forma divertida e interactiva</p>
+</header>
+
+<div class="container">
+<div class="card">
+
+
+<div class="subtema">🧠 Juego 1: Memoria – Acoso y Soluciones</div>
+
+<p class="texto">
+Este juego de memoria ayuda a identificar los tipos de acoso escolar
+y relacionarlos con acciones positivas para prevenir la violencia.
+</p>
+
+<div class="juego-interactivo">
+<iframe
+    src="https://es.educaplay.com/juego/27372650-memoria_acoso_y_soluciones.html"
+    allow="fullscreen; autoplay; clipboard-write"
+    allowfullscreen>
+</iframe>
+</div>
+
+
+
+<div class="subtema">🎯 Juego 2: Verdades y Mentiras sobre el Acoso Escolar</div>
+
+<p class="texto">
+En este juego podrás reflexionar y distinguir entre afirmaciones verdaderas
+y falsas sobre el bullying, fortaleciendo el pensamiento crítico.
+</p>
+
+<div class="juego-interactivo">
+<iframe
+    src="https://es.educaplay.com/juego/27558147-acoso_escolar_verdades_y_mentiras.html"
+    allow="fullscreen; autoplay; clipboard-write"
+    allowfullscreen>
+</iframe>
+</div>
+
+
+<div class="grid">
+
+<div class="cuadro">
+    <h3>🌈 ¿Qué aprendemos?</h3>
+    <ul>
+        <li>Tipos de acoso escolar</li>
+        <li>Consecuencias del bullying</li>
+        <li>Valores y empatía</li>
+    </ul>
+</div>
+
+<div class="cuadro">
+    <h3>🤝 Importancia</h3>
+    <p>Promueve el respeto, la reflexión y una convivencia sana.</p>
+</div>
+
+<div class="cuadro">
+    <h3>🚀 Aprender jugando</h3>
+    <p>Los juegos hacen el aprendizaje más significativo y participativo.</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
