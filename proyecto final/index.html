@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Bienvenida - Proyecto Dolores Sucre</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: 
+        linear-gradient(rgba(20,20,40,0.75), rgba(20,20,40,0.75)),
+        url("imagen.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TARJETA */
+.card {
+    background: rgba(30, 39, 73, 0.9);
+    padding: 35px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    animation: aparecer 1s ease;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecer {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* TITULOS */
+.card h2 {
+    margin-bottom: 15px;
+    color: #ff9f43;
+}
+
+.card p {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* INPUT */
+input {
+    width: 85%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+/* BOTÓN */
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #ff9f43, #ff6b6b);
+    color: #2d3436;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255,159,67,0.5);
+}
+
+/* CONTADOR */
+#contador {
+    font-size: 28px;
+    margin-top: 10px;
+    color: #feca57;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="contenedor">
+    <h2>Bienvenido/a</h2>
+    <p>Proyecto de Convivencia Escolar<br>Colegio Dolores Sucre</p>
+
+    <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre">
+    <br>
+    <button onclick="iniciar()">Ingresar</button>
+</div>
+
+<script>
+function iniciar() {
+    const nombre = document.getElementById("nombreUsuario").value.trim();
+    if (nombre === "") {
+        alert("Por favor, escribe tu nombre");
+        return;
+    }
+
+    let tiempo = 5;
+    const contenedor = document.getElementById("contenedor");
+
+    contenedor.innerHTML = `
+        <h2>¡Hola, ${nombre}!</h2>
+        <p>Entrando al sitio de convivencia escolar en</p>
+        <div id="contador">${tiempo}</div>
+    `;
+
+    const cuenta = setInterval(() => {
+        tiempo--;
+        document.getElementById("contador").textContent = tiempo;
+
+        if (tiempo === 0) {
+            clearInterval(cuenta);
+            window.location.href = "inicio.html";
+        }
+    }, 1000);
+}
+</script>
+
+</body>
+</html>
